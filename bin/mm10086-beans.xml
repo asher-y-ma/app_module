@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="mm10086Config"
+		class="com.sxit.crawler.app.mm10086.Mm10086Config"
+		scope="singleton">
+		<property name="list">
+			<list>
+				<value>http://mm.10086.cn/android/game/qbyx?pay=1</value>
+				<value>http://mm.10086.cn/android/software/qbrj?pay=1</value>
+				<value>http://mm.10086.cn/android/theme/qbzt?pay=1</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="mm10086IphoneConfig"
+		class="com.sxit.crawler.app.mm10086.Mm10086Config"
+		scope="singleton">
+		<property name="list">
+			<list>
+				<value>http://mm.10086.cn/iphone/game/qbyx?pay=1</value>
+				<value>http://mm.10086.cn/iphone/software/qbrj?pay=1</value>
+			</list>
+		</property>
+	</bean>
+	<!--
+		<bean id="mm10086Config" class="com.sxit.crawler.app.mm10086new.Mm10086Config"
+		scope="singleton">
+		<property name="list">
+		<list>
+		<value>http://mm.10086.cn/android/game/qbyx?pay=1</value>
+		<value>http://mm.10086.cn/android/software/qbrj?pay=1</value>
+		<value>http://mm.10086.cn/android/theme/qbzt?pay=1</value>
+		</list>
+		</property>
+		</bean>
+	-->
+	<bean id="urlProxyWithIpPoolUtils"
+		class="com.sxit.crawler.app.mm10086.UrlProxyWithIpPoolUtils"
+		scope="singleton">
+		<property name="ipPool">
+			<list>
+<map><entry key="ip" value="42.96.166.25" /><entry key="port"><value>3128</value></entry></map>
+<map><entry key="ip" value="42.120.22.25" /><entry key="port"><value>3128</value></entry></map>
+<map><entry key="ip" value="42.120.41.84" /><entry key="port"><value>8118</value></entry></map>
+<map><entry key="ip" value="42.120.107.33" /><entry key="port"><value>80</value></entry></map>
+<map><entry key="ip" value="14.18.17.163" /><entry key="port"><value>80</value></entry></map>
+<map><entry key="ip" value="14.18.17.166" /><entry key="port"><value>80</value></entry></map>
+<map><entry key="ip" value="14.18.242.147" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="27.17.33.122" /><entry key="port"><value>8001</value></entry></map>
+<map><entry key="ip" value="58.248.81.11" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="58.251.132.181" /><entry key="port"><value>8888</value></entry></map>
+<map><entry key="ip" value="59.46.72.245" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="59.49.216.141" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="59.63.182.2" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="59.63.182.3" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="59.63.182.4" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="61.142.211.114" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.144.48.169" /><entry key="port"><value>3128</value></entry></map>
+<map><entry key="ip" value="61.144.79.188" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.147.82.87" /><entry key="port"><value>8000</value></entry></map>
+<map><entry key="ip" value="61.153.98.6" /><entry key="port"><value>8080</value></entry></map>
+<map><entry key="ip" value="61.153.153.98" /><entry key="port"><value>80</value></entry></map>
+<map><entry key="ip" value="61.156.235.172" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.158.219.226" /><entry key="port"><value>8118</value></entry></map>
+<map><entry key="ip" value="61.163.163.145" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.163.165.165" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.163.165.250" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.163.231.212" /><entry key="port"><value>9999</value></entry></map>
+<map><entry key="ip" value="61.175.96.34" /><entry key="port"><value>9999</value></entry></map>
+			</list>
+		</property>
+	</bean>
+</beans>

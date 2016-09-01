@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE dataTableConfig SYSTEM "datatable_config.dtd" >
+<dataTableConfig>
+	<!-- 天猫店铺字段映射 -->
+	<tableName>TBAS_MM</tableName>
+	
+	<!-- 唯一字段 -->
+	<unique_column value="WEBMMID" />
+	
+	<unique_sql>
+		<!-- 判断唯一值 -->
+		<!-- 使用之前请针对查询列建索引 -->
+		select count(*) from TBAS_MM where WEBMMID = :WEBMMID and HEADURL = :HEADURL
+	</unique_sql>
+	
+	<columns>
+		<column columnName="MMID" defaultValue="TBAS_MM_ID.NEXTVAL" />
+		<column columnName="MMTITLE" srcKey="MMTITLE" />
+		<column columnName="VERSION" srcKey="VERSION" />
+		<column columnName="CLASSNAME" srcKey="CLASSNAME" />
+		<column columnName="PARENTCLASSNAME" srcKey="PARENTCLASSNAME" />
+		<column columnName="URL" srcKey="URL" />
+		<column columnName="HEADURL" srcKey="HEADURL" />
+		<column columnName="BIDNAME" srcKey="BIDNAME" />
+		<column columnName="WEBMMID" srcKey="WEBMMID" />
+		<column columnName="DOMAIN" srcKey="DOMAIN" />
+		<column columnName="DOMAINNAME" srcKey="DOMAINNAME" />
+		<column columnName="CREATEDATE" defaultValue="sysdate" />
+		<column columnName="DOWNLOADURL" srcKey="DOWNLOADURL" />
+		<column columnName="BEGINSTR" srcKey="BEGINSTR" />
+		<column columnName="ENDSTR" srcKey="ENDSTR" />
+		<column columnName="CLASSID" srcKey="CLASSID" />
+		<column columnName="FEATURETYPE" srcKey="FEATURETYPE" />
+	</columns>
+</dataTableConfig>

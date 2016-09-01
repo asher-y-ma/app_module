@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="myappConfig" class="com.sxit.crawler.app.myapp.MyappConfig"
+		scope="singleton">
+		<property name="pageUrl">
+			<value>http://android.myapp.com/android/qrycategoryranking_web?cid=[first]&amp;ranktype=0&amp;icfa=[second]&amp;pageNo=[third]&amp;pageIndex=-1&amp;pageSize=10&amp;r=0.8470938688403367</value>
+		</property>
+		<property name="detailUrl">
+			<value>http://android.myapp.com/android/appdetail.jsp?appid=[first]&amp;icfa=[second]&amp;lmid=2031</value>
+		</property>
+		<property name="seedUrlList">
+			<list>
+				<value>http://android.myapp.com/android/qrycategorylist_web?r=0.13675061570232927</value>
+				<value>http://android.myapp.com/android/qrygamecategory_web?r=0.10599644252114371</value>
+			</list>
+		</property>
+	</bean>
+</beans>

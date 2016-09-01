@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="HiapkConfig1" class="com.sxit.crawler.app.hiapk.HiapkConfig"
+		scope="singleton">
+		<property name="url">
+			<value>http://apk.hiapk.com/App.aspx?action=FindAppSoftList&amp;categoryId=[first]&amp;currentHash=[second]_1_0_0_0_0_0</value>
+		</property>
+		<property name="categoryId">
+			<list>
+				<value>281</value>
+				<value>285</value>
+				<value>282</value>
+				<value>71</value>
+				<value>283</value>
+				<value>37</value>
+				<value>42</value>
+				<value>284</value>
+				<value>39</value>
+				<value>52</value>
+				<value>286</value>
+				<value>46</value>
+				<value>35</value>
+				<value>36</value>
+				<value>40</value>
+				<value>49</value>
+				<value>45</value>
+				<value>287</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="HiapkConfig2" class="com.sxit.crawler.app.hiapk.HiapkConfig"
+		scope="singleton">
+		<property name="url">
+			<value>http://apk.hiapk.com/Game.aspx?action=FindGameSoftList&amp;categoryId=[first]&amp;currentHash=[second]_1_0_0_0_0_0</value>
+		</property>
+		<property name="categoryId">
+			<list>
+				<value>31</value>
+				<value>289</value>
+				<value>291</value>
+				<value>290</value>
+				<value>29</value>
+				<value>81</value>
+				<value>30</value>
+				<value>80</value>
+				<value>292</value>
+				<value>79</value>
+				<value>288</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="hiapkUrlList" class="com.sxit.crawler.app.hiapk.HiapkUrlList"
+		scope="singleton">
+		<property name="list">
+			<list>
+				<ref bean="HiapkConfig1"/>
+				<ref bean="HiapkConfig2"/>
+			</list>
+		</property>
+	</bean>
+
+</beans>
